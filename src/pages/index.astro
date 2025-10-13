@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Home from '../components/Home.astro';
 import Layout from '../layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Logo from '@/assets/marmoncorp.svg';
+import Banner from '@/components/Banner.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const menu: HeaderMenu = [
+	{ text: 'Inicio', href: '#' },
+	{ text: 'Servicios', href: '#services' },
+	{ text: 'Nosotros', href: '#about' },
+	{ text: 'Contacto', href: '#contact' },
+];
+
 ---
 
 <Layout>
-	<Welcome />
+	<div class="flex flex-col items-center justify-center min-h-screen p-4 max-w-6xl mx-auto">
+		<Header title="Grupo Empresarial Marmon SAS" menu={menu} logo={Logo} />
+		<Banner/>
+	  <div class="flex-1">
+		<Home/>
+		</div>
+		<footer class="mt-8 text-sm text-gray-500">
+			<p>&copy; {new Date().getFullYear()} Grupo Empresarial Marmon SAS. All rights reserved.</p>
+		</footer>
+	</div>
 </Layout>

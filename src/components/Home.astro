@@ -1,0 +1,216 @@
+---
+import Icon001 from '@/assets/icons/icon001.svg';
+import Icon002 from '@/assets/icons/icon002.svg';
+import Icon003 from '@/assets/icons/icon003.svg';
+import Icon004 from '@/assets/icons/icon004.svg';
+import Icon005 from '@/assets/icons/icon005.svg';
+import Icon006 from '@/assets/icons/icon006.svg';
+import Icon007 from '@/assets/icons/icon007.svg';
+import Icon008 from '@/assets/icons/icon008.svg';
+import IconAvionPapel from '@/assets/icons/icon-avion-papel.svg';
+import IconTelefono from '@/assets/icons/icon-telefono.svg';
+import IconFlechaDerecha from '@/assets/icons/icon-flecha-derecha.svg';
+
+const brands = [
+	{ name: 'Marmon Builds', icon: Icon004, link: '#', description: 'Construcción moderna con diseño sostenible y ejecución de alta calidad para proyectos residenciales y comerciales.' },
+	{ name: 'Marmon Lex', icon: Icon005, link: '#', description: 'Asesoría legal con enfoque estratégico en derecho corporativo, civil y laboral. Cercanía y resultados.' },
+	{ name: 'Marmon Tech', icon: Icon006, link: '#', description: 'Soluciones tecnológicas y plataformas educativas que impulsan la transformación digital.' },
+	{ name: 'Marmon Travel', icon: Icon007, link: '#', description: 'Turismo en Medellín y Antioquia con experiencias locales, seguras y memorables en pueblos coloridos.' },
+];
+
+---
+
+<div class="flex flex-col items-center w-full">
+	<main class="flex flex-col items-center w-full px-6 py-16 gap-12 text-center">
+		<div class="max-w-[850px]">
+			<h2 class="text-[28px] font-bold text-[#0F1724] mb-4">Acerca del grupo</h2>
+			<p class="text-[#4B5563] text-[16px] leading-relaxed">
+				Marmon integra varias líneas de negocio para ofrecer soluciones 360°: proyectos de construcción,
+				consultoría legal, plataformas tecnológicas y turismo en Medellín y pueblos cercanos. Operamos con
+				estándares de calidad, enfoque humano y sostenibilidad.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-6">
+			<div class="flex flex-col items-center gap-3">
+				<div class="bg-[#FFF4E9] p-4 rounded-full">
+					<Icon001 class="w-8 h-8 text-[#8A5D2B]" />
+				</div>
+				<p class="text-[#0F1724] font-medium text-[15px]">
+					Cobertura nacional y equipos locales
+				</p>
+			</div>
+			<div class="flex flex-col items-center gap-3">
+				<div class="bg-[#FFF4E9] p-4 rounded-full">
+					<Icon002 class="w-8 h-8 text-[#8A5D2B]" />
+				</div>
+				<p class="text-[#0F1724] font-medium text-[15px]">
+					Servicio personalizado por línea comercial
+				</p>
+			</div>
+			<div class="flex flex-col items-center gap-3">
+				<div class="bg-[#FFF4E9] p-4 rounded-full">
+					<Icon003 class="w-8 h-8 text-[#8A5D2B]" />
+				</div>
+				<p class="text-[#0F1724] font-medium text-[15px]">
+					Calidad certificada y mejora continua
+				</p>
+			</div>
+		</div>
+
+		<div class="w-full flex flex-col items-center mt-12">
+			<h2 class="text-[28px] font-bold text-[#0F1724] mb-8">
+				Explora nuestras áreas de negocio
+			</h2>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
+				{brands.map((brand) => {
+					const Icon = brand.icon;
+					return (
+						<div
+							class="flex items-start border border-[#E6E6E6] rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow gap-4"
+						>
+							<div class="h-full flex items-center justify-center">
+								<div class="bg-[#44C767] p-4 rounded-lg">
+									<Icon class="w-8 h-auto text-white" />
+								</div>
+							</div>
+							<div class="text-left">
+								<h3 class="text-[20px] font-semibold text-[#0F1724] mb-2">{brand.name}</h3>
+								<p class="text-[15px] text-[#4B5563] mb-4">{brand.description}</p>
+								<a
+									href={brand.link}
+									class="inline-flex items-center gap-2 font-medium border-b bg-[#0a64ff] text-white px-4 py-2 rounded-lg hover:bg-[#704a22] transition-colors"
+								>
+									<IconFlechaDerecha class="w-4 h-4" /> Conoce más
+								</a>
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	</main>
+
+	<section class="flex flex-col md:flex-row justify-between w-full px-6 py-16 gap-8 border-t border-[#E6E6E6]">
+		<div class="flex-1 bg-[#FFF9F3] p-8 rounded-2xl shadow-sm">
+			<h2 class="text-[24px] font-bold text-[#0F1724] mb-3">Misión</h2>
+			<p class="text-[15px] text-[#4B5563] leading-relaxed">
+				Impulsar el crecimiento de nuestros clientes mediante soluciones integrales en construcción, derecho,
+				tecnología y turismo; operando con ética, innovación y un servicio excepcional.
+			</p>
+		</div>
+		<div class="flex-1 bg-[#FFF9F3] p-8 rounded-2xl shadow-sm">
+			<h2 class="text-[24px] font-bold text-[#0F1724] mb-3">Visión</h2>
+			<p class="text-[15px] text-[#4B5563] leading-relaxed">
+				Ser un grupo empresarial referente en Colombia por su impacto positivo, sostenibilidad y excelencia
+				operativa en múltiples líneas comerciales.
+			</p>
+		</div>
+	</section>
+
+	<section class="w-full max-w-[900px] px-6 py-16 border-t border-[#E6E6E6]">
+		<form class="flex flex-col gap-8">
+			<div class="flex flex-col md:flex-row items-center gap-4">
+				<div class="bg-[#FFF4E9] p-4 rounded-full">
+					<Icon008 class="w-8 h-8 text-[#8A5D2B]" />
+				</div>
+				<div>
+					<h3 class="text-[22px] font-bold text-[#0F1724]">
+						¿Buscas un aliado para tu próximo proyecto?
+					</h3>
+					<p class="text-[#4B5563] text-[15px]">
+						Conversemos y arma un paquete de servicios a tu medida.
+					</p>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<h2 class="text-[28px] font-bold text-[#0F1724] mb-2">Contáctanos</h2>
+				<p class="text-[#4B5563] text-[15px]">
+					Dinos en qué podemos ayudarte y un especialista te responderá.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="flex flex-col text-left">
+					<label for="nombre" class="text-[#0F1724] text-[14px] font-medium mb-1">
+						Nombre
+					</label>
+					<input
+						id="nombre"
+						type="text"
+						placeholder="Escribe tu nombre"
+						class="border border-[#E6E6E6] rounded-xl px-4 py-2 focus:ring-2 focus:ring-[#8A5D2B] outline-none"
+						required
+					/>
+				</div>
+				<div class="flex flex-col text-left">
+					<label for="email" class="text-[#0F1724] text-[14px] font-medium mb-1">
+						Correo electrónico
+					</label>
+					<input
+						id="email"
+						type="email"
+						placeholder="nombre@empresa.com"
+						class="border border-[#E6E6E6] rounded-xl px-4 py-2 focus:ring-2 focus:ring-[#8A5D2B] outline-none"
+						required
+					/>
+				</div>
+				<div class="flex flex-col text-left">
+					<label for="telefono" class="text-[#0F1724] text-[14px] font-medium mb-1">
+						Teléfono
+					</label>
+					<input
+						id="telefono"
+						type="tel"
+						placeholder="+(57) 300 000 0000"
+						class="border border-[#E6E6E6] rounded-xl px-4 py-2 focus:ring-2 focus:ring-[#8A5D2B] outline-none"
+						required
+					/>
+				</div>
+				<div class="flex flex-col text-left">
+					<label for="linea" class="text-[#0F1724] text-[14px] font-medium mb-1">
+						Línea de interés
+					</label>
+					<input
+						id="linea"
+						type="text"
+						placeholder="Construcción, derecho, tecnología, turismo..."
+						class="border border-[#E6E6E6] rounded-xl px-4 py-2 focus:ring-2 focus:ring-[#8A5D2B] outline-none"
+						required
+					/>
+				</div>
+				<div class="flex flex-col text-left md:col-span-2">
+					<label for="mensaje" class="text-[#0F1724] text-[14px] font-medium mb-1">
+						Mensaje
+					</label>
+					<textarea
+						id="mensaje"
+						placeholder="Cuéntanos más sobre tu proyecto..."
+						rows={5}
+						class="border border-[#E6E6E6] rounded-xl px-4 py-2 focus:ring-2 focus:ring-[#8A5D2B] outline-none resize-none"
+						required
+					></textarea>
+				</div>
+			</div>
+
+			<div class="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+				<button
+					type="submit"
+					class="flex items-center justify-center gap-2 bg-[#8A5D2B] text-white px-6 py-3 rounded-xl hover:bg-[#704a22] transition-colors"
+				>
+					<IconAvionPapel class="w-5 h-5" />
+					Enviar mensaje
+				</button>
+				<button
+					type="button"
+					class="flex items-center justify-center gap-2 border border-[#8A5D2B] text-[#8A5D2B] px-6 py-3 rounded-xl hover:bg-[#FFF4E9] transition-colors"
+				>
+					<IconTelefono class="w-5 h-5" />
+					Agendar llamada
+				</button>
+			</div>
+		</form>
+	</section>
+</div>
