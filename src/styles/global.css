@@ -8,11 +8,12 @@
   --color-text-green: #0B6B4A;
 }
 
-body {
+html, body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-primary);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
